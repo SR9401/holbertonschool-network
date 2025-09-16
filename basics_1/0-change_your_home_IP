@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #Change your home IP
+
 sed -i '/localhost/s/^127\.0\.0\.1/127.0.0.2/' /etc/hosts
 if grep -qE '(^|\s)facebook\.com(\s|$)' /etc/hosts; then
   sed -i '/(^|\s)facebook\.com\( \|$\)/ s/^[0-9.]\+/8.8.8.8/' /etc/hosts
